@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-08-22T21:53:43</date>
+  <millis>1440262423628</millis>
+  <sequence>0</sequence>
+  <logger>.</logger>
+  <level>INFO</level>
+  <class>com.atomicscala.Logging$class</class>
+  <method>info</method>
+  <thread>1</thread>
+  <message>Constructing a LoggingTest</message>
+</record>
+<record>
+  <date>2015-08-22T21:53:43</date>
+  <millis>1440262423686</millis>
+  <sequence>1</sequence>
+  <logger>.</logger>
+  <level>FINER</level>
+  <class>com.atomicscala.Logging$class</class>
+  <method>trace</method>
+  <thread>1</thread>
+  <message>entering f</message>
+</record>
+<record>
+  <date>2015-08-22T21:53:43</date>
+  <millis>1440262423687</millis>
+  <sequence>2</sequence>
+  <logger>.</logger>
+  <level>FINER</level>
+  <class>com.atomicscala.Logging$class</class>
+  <method>trace</method>
+  <thread>1</thread>
+  <message>leaving f</message>
+</record>
+<record>
+  <date>2015-08-22T21:53:43</date>
+  <millis>1440262423703</millis>
+  <sequence>3</sequence>
+  <logger>.</logger>
+  <level>FINE</level>
+  <class>com.atomicscala.Logging$class</class>
+  <method>debug</method>
+  <thread>1</thread>
+  <message>inside g with i: 0</message>
+</record>
+<record>
+  <date>2015-08-22T21:53:43</date>
+  <millis>1440262423704</millis>
+  <sequence>4</sequence>
+  <logger>.</logger>
+  <level>FINE</level>
+  <class>com.atomicscala.Logging$class</class>
+  <method>debug</method>
+  <thread>1</thread>
+  <message>inside g with i: -1</message>
+</record>
+<record>
+  <date>2015-08-22T21:53:43</date>
+  <millis>1440262423705</millis>
+  <sequence>5</sequence>
+  <logger>.</logger>
+  <level>SEVERE</level>
+  <class>com.atomicscala.Logging$class</class>
+  <method>error</method>
+  <thread>1</thread>
+  <message>i less than 0</message>
+</record>
+<record>
+  <date>2015-08-22T21:53:43</date>
+  <millis>1440262423706</millis>
+  <sequence>6</sequence>
+  <logger>.</logger>
+  <level>FINE</level>
+  <class>com.atomicscala.Logging$class</class>
+  <method>debug</method>
+  <thread>1</thread>
+  <message>inside g with i: 101</message>
+</record>
+<record>
+  <date>2015-08-22T21:53:43</date>
+  <millis>1440262423707</millis>
+  <sequence>7</sequence>
+  <logger>.</logger>
+  <level>WARNING</level>
+  <class>com.atomicscala.Logging$class</class>
+  <method>warn</method>
+  <thread>1</thread>
+  <message>i getting high: 101</message>
+</record>
+</log>

@@ -1,0 +1,41 @@
+/* ----- Guide to Functional Programming in Scala ----- */
+/*
+Not everything mentioned here is essentially evil Scala is not a pure functional language its a Hybrid language and there are places where only imperative makes sense so ""DONT FORCE FUNCTIONAL""
+*/
+
+Rules:
+1 - If you are using var's you are most probably not doing it functional way.
+/*
+@AntiExample
+def printArgs(args: Array[String]): Unit = {
+    var i = 0
+    while (i < args.length) {
+      println(args(i))
+      i += 1
+    }
+  }
+
+@Example
+def printArgs(args: Array[String]): Unit = {
+   args.foreach(println)
+ }
+*/
+
+2 - If function is not returning anything meaning full then its most probably making some side effect and pure functional code does not have side effects.
+/*
+@AntiExample
+Example mentioned in "1" is not purely functional because foreach has a side effect of printing to output stream.
+
+@Example
+def formatArgs(args: Array[String]) = args.mkString("\n")
+println(formatArgs(args))
+
+Now both var's and side effects are eliminated. (Its making side effect in a way but) every function is only doing what its meant to do and creating no side effect.
+*/
+
+3 - "1" and "2" also make your testable forexample to test the functional code you can simply do.
+/*
+@Example
+val res = formatArgs(Array("0","1","2"))
+assert(res == "0\n1\n2")
+*/
