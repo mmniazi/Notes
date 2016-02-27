@@ -8,7 +8,7 @@
 
 def palindromic(n: Int) = {
   val string = n toString;
-  string.length == 6 && string.substring(0,3) == string.substring(3, 6).reverse
+  (string.length == 6) && (string.substring(4) == string.substring(4, 6))
 }
 
 val numbers =
@@ -18,4 +18,4 @@ val numbers =
     if palindromic(i * j)
   } yield i * j
 
-numbers max
+numbers
