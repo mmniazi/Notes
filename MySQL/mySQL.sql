@@ -42,7 +42,10 @@
 38 - SELECT * FROM pet WHERE name LIKE '%w%'; -- selects all names containing w
 39 - SELECT * FROM pet WHERE name LIKE '_____'; -- selects all 5 characters names
 40 - You can also use extended regular experssions using REGEXP and NOT REGEXP or RLIKE and NOT RLIKE which are synonyms
-41 - SELECT * FROM pet WHERE name REGEXP '^b'; -- you can read docs on extended regexp, here ^b represent all names starting with b
+ - SELECT * FROM tutorial.billboard_top_100_year_end WHERE "group" ILIKE 'snoop%' -- ILIKE is used to select without case senstive
+ - SELECT * FROM tutorial.billboard_top_100_year_end WHERE year_rank IN (1, 2, 3) -- IN is used to define multiple values for exact match
+ - SELECT * FROM tutorial.billboard_top_100_year_end WHERE year_rank BETWEEN 5 AND 10 -- BETWEEN is used for defining range of inputs
+ - SELECT * FROM pet WHERE name REGEXP '^b'; -- you can read docs on extended regexp, here ^b represent all names starting with b
 42 - SELECT COUNT(*) FROM pet; -- COUNT() can be used to calculate number of instances matching the experssion here it will return total table rows
 43 - SELECT owner, COUNT(*) FROM pet GROUP BY owner; -- selects owner and count column so you can see how many pets each owner haves
 44 - SELECT species, sex, COUNT(*) FROM pet
@@ -63,3 +66,79 @@ SELECT species, sex, COUNT(*) FROM pet
 49 - mysql -e "source batch-file" -- On windows to avoid having problems with special characters you can use this command.
 50 - mysql < batch-file | more -- to avoid priniting a lot of data in short time use this command
 51 - mysql < batch-file > mysql.out -- save output to a file.
+
+-- Intermediate tutorials sqlschool: https://sqlschool.modeanalytics.com/intermediate
+
+-- AGGREGATE FUNTIONS
+
+-- COUNT: counts the number of rows
+SELECT COUNT(*)
+  FROM tutorial.aapl_historical_stock_price
+-- COUNT(1) is same as COUNT(*)
+-- COUNT(high) selects not null rows
+SELECT COUNT(high)
+  FROM tutorial.aapl_historical_stock_price
+-- COUNT(low) selects null rows
+SELECT COUNT(low)
+  FROM tutorial.aapl_historical_stock_price
+-- To change name of count column use AS
+SELECT COUNT(date) AS "Count Of Date"
+  FROM tutorial.aapl_historical_stock_price
+
+-- SUM: returns sum of all rows values
+SELECT SUM(volume)
+  FROM tutorial.aapl_historical_stock_price
+-- SUM treats null as zero
+
+-- MIN: returns minimum values, MAX: returns maximum values
+SELECT MIN(volume) AS min_volume,
+       MAX(volume) AS max_volume
+  FROM tutorial.aapl_historical_stock_price
+
+-- AVG: returns average of all rows
+-- It ignores null completly instead of considering it 0
+SELECT AVG(high)
+  FROM tutorial.aapl_historical_stock_price
+
+-- GROUP BY: allows you to separate data into groups which can be aggregated independent of one another
+SELECT year,
+       COUNT(*) AS count
+  FROM tutorial.aapl_historical_stock_price
+ GROUP BY year
+-- You can also group by multiple columns
+SELECT year,
+       month,
+       COUNT(*) AS count
+  FROM tutorial.aapl_historical_stock_price
+ GROUP BY year, month
+-- You can also substitute column names with no's
+SELECT year,
+       month,
+       COUNT(*) AS count
+  FROM tutorial.aapl_historical_stock_price
+ GROUP BY 1, 2
+
+ -- HAVING: let’s say that you want to find every month during which AAPL stock worked its way over $400/share. The WHERE clause won’t work for this because it doesn’t allow you to filter on aggregate columns — that’s where the HAVING clause comes in
+ SELECT year,
+       month,
+       MAX(high) AS month_high
+  FROM tutorial.aapl_historical_stock_price
+ GROUP BY year, month
+HAVING MAX(high) > 400
+ ORDER BY year, month
+
+-- CASE: The CASE statement is SQL’s way of handling if/then logic. The CASE statement is followed by at least one pair of WHEN and THEN statements — SQL’s equivalent of IF/THEN. It must end with the END statement. The ELSE statement is optional, and provides a way to capture values not specified in the WHEN/THEN statements.
+
+SELECT player_name,
+       year,
+       CASE WHEN year = 'SR' THEN 'yes'
+            ELSE 'nope' END AS is_a_senior
+  FROM benn.college_football_players
+-- CASE checks for condtion in each row and if it is true it inserts yes in newly create is_a_senior column and if it is false it inserts nope
+SELECT player_name,
+       weight,
+       CASE WHEN weight > 250 THEN 'over 250'
+            WHEN weight > 200 THEN '201-250'
+            WHEN weight > 175 THEN '176-200'
+            ELSE '175 or under' END AS weight_group
+  FROM benn.college_football_players
