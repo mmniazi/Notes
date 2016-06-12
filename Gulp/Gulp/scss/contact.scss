@@ -1,0 +1,77 @@
+    /*contact us css start*/
+    .contact-form {
+        margin-top   : 10px;
+        margin-bottom: 10px;
+
+        .contact-header {
+            padding   : 10px;
+            background: $color-darker-blue;
+
+            h3 {
+                font-family: $font-large;
+                margin     : 0;
+                color      : white;
+            }
+        }
+
+        .contact-body {
+            padding: 20px;
+            border : 1px solid $color-light-gray;
+
+            label {
+                font-family: $font-small;
+            }
+
+            .input-group {
+                width: 100%;
+
+                input[type="text"] {
+                    width: 100%;
+                }
+
+                input[type="textarea"] {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .contact-detail {
+        p {
+            font-family: $font-small;
+        }
+
+        strong {
+            font-family: $font-small;
+        }
+
+        address {
+            font-family: $font-small;
+        }
+
+        h3 {
+            font-family: $font-small;
+        }
+    }
+
+    .contact-label {
+        text-align: left!important;
+        font-size : 13px;
+    }
+
+    .contact-field {
+        font-size: 12px;
+    }
+    /*contact us css closed*/
+
+    /*map arae css start*/
+    .map-area {
+        margin-top   : 10px;
+        margin-bottom: 10px;
+
+        img {
+            height: 383px;
+            width : 100%;
+        }
+    }
+    /*map area css closed*/

@@ -1,0 +1,181 @@
+    /*footer area stsrt*/
+    footer {
+        background-color: $dark-color;
+        padding         : 40px;
+        border-top      : 5px solid $dark-color-accent;
+
+        a:hover {
+            text-decoration: none;
+        }
+        .footer-logo {
+            margin     : auto;
+            padding-top: 0;
+            width: 120px;
+            vertical-align: middle;
+            padding-top: 15px;
+        }
+
+        ul {
+            padding: 0;
+            margin : 0;
+
+            li {
+                list-style: none;
+
+                a {
+                    color          : $color-white;
+                    text-decoration: none;
+                    padding        : 5px 10px;
+                    display        : block;
+                }
+
+                a:hover {
+                    color          : $color-white;
+                    text-decoration: none;
+                }
+
+                a:focus {
+                    text-decoration: none !important;
+                    color: white !important;
+                }
+            }
+
+            li:hover {
+                background: $dark-color-accent;
+            }
+        }
+
+        img {}
+
+        strong {
+            color: $color-white;
+        }
+
+        .address-box {
+            padding-top: 10px;
+        }
+
+        p {
+            color      : $color-white;
+            margin     : 0;
+            line-height: 30px;
+        }
+
+        .join-us {
+            background         : url("../images/map.png") no-repeat right top;
+            position           : absolute;
+            top                : -40px;
+            width              : 100%;
+            right              : -83px;
+            display            : block;
+            background-position: center;
+            background-size    : cover;
+
+            .inner-box {
+                padding: 22.9% 5%;
+            }
+
+            button {
+                border : none;
+                padding: 10px;
+                width  : 100%;
+                color  : white;
+            }
+        }
+        /*new footer css strt*/
+        &.footer-container{
+            height: 146px;
+            padding-top: 22px;
+        }
+        .get-app{
+            strong{
+                color: white;
+                font-weight: 700;
+            }
+            p{
+                margin-top:10px;
+                button{}
+                a{
+                    float: left;
+                    width: 50%;
+                    padding-right: 10px;
+                    img{
+                        
+                    }
+                }
+            }
+        }
+        .mobile-bg-container{
+            position:relative;
+             .mobile-bg{
+                    background-image: url("../images/mobile-view-1.png");
+                    background-repeat: no-repeat;
+                    display: block;
+                    width: 104%;
+                    height: 355px;
+                    margin: 0px;
+                    position: absolute;
+                    top: -180px;
+                    left:-48px;
+            }
+        }
+        .footer-column-div{
+            float: right;
+            ul.footer-row-links{                
+                li{
+                    list-style: none;
+                    color: $color-white;
+                    float: right;
+                    a{
+                        color: $color-white;
+                        text-decoration: none;
+                        padding: 5px 8px;
+                        display: block;
+                        padding-left: 15px;
+                       }
+                    a:hover{}
+                }
+                li:hover{
+                    background: transparent;
+                }
+            }
+            p{
+                color: $color-dark-grayish-blue;
+                padding-left: 10px;
+                padding-right: 8px;
+                padding-top: 5px;
+                font-size: 13px;
+                i{
+                    color: $brand-color;
+                    padding-right: 7px;
+                    padding-left: 7px;
+                }
+                i.copyright{
+                    color: $color-dark-grayish-blue;
+                    padding-right: 2px;
+                    padding-left: 2px; 
+                }
+                a{
+                    text-decoration: none;
+                    color: $color-dark-grayish-blue;
+                }
+                a:hover{}
+            }
+            .footer-logo{
+                padding-top: 0px;
+            }
+            &.footer-logo-container{
+                margin-right: 23px;
+            }
+        }
+
+        /*new footer css closed*/
+    }
+    ul.footer-links{
+    float:left;
+    padding-right:20px;
+    }
+    .footer-space-area{
+        height: 60px;
+    }
+    /*footer area closed*/

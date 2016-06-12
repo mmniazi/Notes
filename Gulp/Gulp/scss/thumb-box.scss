@@ -1,0 +1,193 @@
+    /*search page css start*/
+    .thumb-box {
+        background-color: rgba(255,255,255,0.6);
+        margin-bottom   : 30px;
+        border-radius   : 5px;
+        border          : 3px solid transparent;
+        margin-left     : -3px;
+        margin-right    : -3px;
+        position        : relative;
+        top             : 0;
+        left            : 0;
+
+        .thumb-box-inner {
+            border       : 1px solid rgba(0,0,0,0.1);
+            padding      : 10px;
+            box-shadow   : 0 0 10px rgba(0,0,0,0.05);
+            border-radius: 5px;
+        }
+
+        .box-image {
+            position           : relative;
+            height             : 155px;
+            background-size    : cover;
+            background-repeat  : no-repeat;
+            background-position: center;
+
+            img {}
+
+            .heading {
+                width     : 100% !important;
+                height    : 26px!important;
+                padding   : 3px !important;
+                background: rgba(0, 0, 0, 0.46)!important;
+
+                p {
+                    margin       : 0;
+                    color        : $color-white;
+                    font-weight  : 700;
+                    text-align   : right;
+                    padding-right: 10px;
+                }
+            }
+
+            .user-rank {
+                position        : absolute;
+                bottom          : 0;
+                background-color: transparent;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                right           : 0;
+                padding         : 10px;
+                width           : 53px;
+                height          : 55px;
+
+                i {
+                    color     : $color-white;
+                    text-align: center;
+                    margin    : auto;
+                    width     : 100%;
+                }
+
+                label {
+                    clear     : both;
+                    background: $color-gray;
+                    width     : 53px;
+                    position  : absolute;
+                    bottom    : 0;
+                    right     : 0;
+                }
+            }
+        }
+
+        .box-text {
+            padding-top: 10px;
+
+            p {
+                font-family  : $font-small;
+                margin       : 0;
+                font-size    : 16px;
+                text-overflow: ellipsis;
+                overflow     : hidden;
+                white-space  : nowrap;
+
+                span.icon1 {
+                    background-image : url("../images/icon-1.gif");
+                    padding-right    : 20px;
+                    color            : $color-darkish-gray;
+                    width            : 26px;
+                    height           : 19px;
+                    background-repeat: no-repeat;
+                }
+
+                span.icon2 {
+                    background-image   : url("../images/icons.png");
+                    background-position: -15px -45px;
+                    padding-left       : 20px;
+                    color              : $color-darkish-gray;
+                    width              : 26px;
+                    height             : 19px;
+                }
+
+                .game-label {
+                    opacity  : .5;
+                    padding  : 0;
+                    font-size: 15px;
+                }
+
+                strong {
+                    font-weight: 600;
+                }
+            }
+
+            strong {
+                font-family: $font-small;
+            }
+
+            span {
+                font-family : $font-small;
+                padding-left: 10px;
+            }
+
+            .rank-box {
+                text-align      : right;
+                clear           : both;
+                padding         : 5px 10px;
+                margin-left     : -10px;
+                margin-right    : -10px;
+                background-color: rgba(0, 0, 0, 0.03);
+                position        : relative;
+                margin-top      : 5px;
+
+                span {
+                    background: rgba(0, 0, 0, 0.1);
+                    padding   : 5px 10px;
+                    color     : $color-black;
+
+                    strong {
+                        padding-left: 5px;
+                    }
+                }
+
+                .live-div {
+                    position      : absolute;
+                    top           : 0;
+                    left          : 10px;
+                    background    : $brand-color-accent;
+                    color         : $color-white;
+                    text-transform: none;
+
+                    strong {
+                        padding-left: 5px;
+                    }
+
+                    .live-icon {
+                        font-size   : 10px;
+                        margin-right: 8px;
+                        margin-top  : -2px;
+                        position    : relative;
+                        top         : -1px;
+                    }
+                }
+
+                .off-line {
+                    background: rgba(0, 0, 0, 0.1);
+                    color     : $color-black;
+
+                    i {
+                        display: none;
+                    }
+                }
+
+                .users-icon {
+                    color        : $color-black;
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+
+    .thumb-box:hover {
+        border    : 3px solid $brand-color-sharp;
+        box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+        cursor    : pointer;
+        /*margin-right: -2px;
+	    margin-bottom: -2px;
+	    margin-left: -2px;
+	    margin-top: -2px;*/
+        .thumb-box-inner {
+            border: 1px solid transparent;
+        }
+    }
+    /*search page css closed*/

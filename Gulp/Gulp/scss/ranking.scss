@@ -1,0 +1,195 @@
+    /*agency dashboard css stsrt*/
+    .agency-dashboard {
+        .gift-text {
+            p {
+                width: 80%!important;
+            }
+        }
+
+        .profile-userpic {
+            img {
+                float                : none;
+                margin               : 0 auto;
+                width                : 50%;
+                height               : 50%;
+                -webkit-border-radius: 50%!important;
+                -moz-border-radius   : 50%!important;
+                border-radius        : 50%!important;
+            }
+        }
+
+        .profile-usertitle {
+            text-align: center;
+            margin-top: 20px;
+
+            .profile-usertitle-name {
+                color        : $color-dark-blue;
+                font-size    : 20px;
+                font-weight  : 600;
+                margin-bottom: 7px;
+            }
+
+            .profile-usertitle-job {
+                text-transform: uppercase;
+                color         : $color-blue;
+                font-size     : 13px;
+                font-weight   : 800;
+                margin-bottom : 7px;
+            }
+        }
+
+        .profile-userbuttons {
+            text-align: center;
+            margin-top: 20px;
+
+            button {}
+        }
+
+        .profile-usermenu {
+            margin-top    : 20px;
+            padding-bottom: 20px;
+
+            .nav {
+                li {
+                    border-bottom: 1px solid $color-cloud;
+
+                    a {
+                        font-size  : 12px;
+                        font-weight: 400;
+                        padding    : 5px;
+                        color      : $color-gray;
+
+                        i {
+                            margin-right: 8px;
+                            font-size   : 16px;
+                        }
+                    }
+
+                    a:hover {
+                        background-color: $color-offwhite;
+                        color           : $color-blue;
+                    }
+                }
+            }
+        }
+
+        .purchase-model {
+            p {
+                padding: 0;
+                margin : 0;
+
+                strong {
+                    float         : left;
+                    color         : $color-darker-gray;
+                    text-transform: none;
+                    font-size     : 15px;
+                    font-family   : $font-small;
+                    font-weight   : 700;
+                    box-shadow    : none;
+                    padding       : 0;
+                }
+
+                strong.label {
+                    float         : none;
+                    color         : $color-darker-gray;
+                    text-transform: none;
+                    font-size     : 15px;
+                    font-family   : $font-small;
+                    font-weight   : 700;
+                    box-shadow    : none;
+                    padding       : 0;
+                }
+
+                img {
+                    float       : left;
+                    padding-left: 10px;
+                }
+
+                span {
+                    float       : left;
+                    padding-left: 10px;
+                }
+            }
+        }
+
+        .honor-ranking {
+            .honor-ranking-row {
+                margin-top   : 15px;
+                margin-bottom: 15px;
+
+                .user-Profile {
+                    padding-right: 0;
+
+                    .user-image {
+                        background: url("../images/family_icons.gif") no-repeat 0 0;
+                        width     : 51px;
+                        height    : 48px;
+                        display   : block;
+                        text-align: center;
+                    }
+                }
+
+                .user-text {
+                    p {
+                        font-weight: 600;
+                        font-family: $font-small;
+                        color      : $color-darker-gray;
+                        margin     : 0;
+                    }
+
+                    span {
+                        font-family: $font-small;
+                        opacity    : .5;
+                        padding    : 0;
+                        font-size  : 15px;
+                    }
+                }
+            }
+        }
+
+        .agency-name {
+            .user-comment {
+                padding-top   : 10px;
+                padding-bottom: 10px;
+
+                p {
+                    margin     : 0;
+                    font-family: $font-small;
+                    opacity    : .5;
+                    padding    : 0;
+                    font-size  : 15px;
+                }
+
+                strong {
+                    font-weight: 600;
+                    font-family: $font-small;
+                    color      : $color-darker-gray;
+                }
+            }
+
+            .user-Profile {
+                padding-right: 0;
+
+                .user-image {
+                    img {}
+                }
+            }
+
+            .user-text {
+                p {
+                    font-weight: 600;
+                    font-family: $font-small;
+                    color      : $color-darker-gray;
+                    margin     : 0;
+                }
+
+                span {
+                    font-family: $font-small;
+                    opacity    : .5;
+                    padding    : 0;
+                    font-size  : 15px;
+                }
+            }
+        }
+    }
+    /*agency dashboard css closed*/

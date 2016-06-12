@@ -49,12 +49,3 @@ gulp.task('serve', function () {
 gulp.task('default', ['jshint', 'serve'], function () {
 	console.log("Running Gulp");
 });
-
-/*
-Installation Scripts:
-npm install --save-dev gulp-load-plugins
-npm install gulp-jshint --save
-npm install jshint-stylish --save
-npm install gulp-live-server --save // love this tried dozen but none worked :P
-npm install connect-livereload --save
-*/

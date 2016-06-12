@@ -1,0 +1,264 @@
+   /*header css start*/
+    .mega-menu {
+        background-color: $brand-color;
+        min-height      : 72px;
+        position        : relative;
+        border-top      : 4px solid $dark-color;
+        /*box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);*/
+        box-shadow      : 0 0 20px rgba(0, 0, 0, 0.2);
+        border-bottom   : 0;
+        min-height      : 40px;
+        position        : fixed;
+        z-index: 9999;
+
+        .navbar-header {
+            /*position: relative;*/
+
+            .navbar-brand {
+                display:none;
+                background-color: $brand-color;
+                position: absolute;
+                top: -4px;
+                text-align: center;
+                text-decoration: none;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+                padding-bottom: 0;
+                left: -57px;
+                height: 118px;
+
+                img {
+                    margin: auto;
+                }
+            }
+        }
+
+        .navbar-contents {
+            padding-left: 20px;
+
+            .navbar-nav {
+                padding-top: 10px;
+
+                .navbar-inverse .navbar-nav > .active > a,
+                .navbar-inverse .navbar-nav > .active > a:focus,
+                .navbar-inverse .navbar-nav > .active > a:hover,
+                li:hover {
+                    background: $brand-color-accent;
+                    cursor    : pointer;
+                }
+
+                li:hover a {}
+
+                li > a {
+                    color         : $color-white;
+                    font-size     : 17px;
+                    padding-top   : 9px;
+                    padding-bottom: 13px;
+                }
+            }
+
+            .navbar-menu-new {
+                padding-top  : 0;
+                padding-right: 22px;
+
+                .navbar-inverse .navbar-nav > .active > a,
+                .navbar-inverse .navbar-nav > .active > a:focus,
+                .navbar-inverse .navbar-nav > .active > a:hover,
+                li:hover {
+                    cursor: pointer;
+                }
+
+                li.sign-up-btn { 
+                    margin-left: 10px;
+                    /*border-left: 1px solid rgb(160, 31, 31);*/
+                    background : $color-dark-red;
+                }
+
+                li.sign-up-btn:hover {
+                    background: rgba(156, 36, 36, 0.68);
+                    cursor    : pointer;
+                }
+
+                li:hover a {}
+
+                li > a {
+                    color         : $color-white;
+                    font-size     : 15px;
+                    padding-top   : 11px;
+                    padding-bottom: 12px;
+                }
+            }
+        } 
+
+        .navbar-contents-new {
+            padding-left: 0; 
+        }
+
+        .search-engine {
+            padding-top  : 13px;
+            margin-bottom: 14px;
+            position     : relative;
+
+            input[type="text"] {
+                background  : $color-white;
+                border-color: transparent;
+                box-shadow  : 0 0 10px rgba(0, 0, 0, 0.1)!important;
+                padding-left: 22px;
+            }
+
+            input[type="text"]:focus {
+                background: $color-white;
+            }
+
+            i {
+                position: absolute;
+                right   : 20px;
+                top     : 14px;
+                color   : $color-black;
+            }
+
+            i:hover {
+                color: $color-black;
+            }
+        }
+
+        .search-engine-new {
+            padding-top: 0;
+            margin     : 0;
+            left: -78px;
+  
+            input[type="text"] {
+                border-color : transparent;
+                box-shadow   : none!important;
+                height       : 43px;
+                border-radius: 0;
+            }
+
+            span { 
+                border       : none;
+                background   : $color-white;
+                box-shadow   : none;
+                border-radius: 0;
+                padding: 0px;
+                border-left: 1px solid $color-whitesmoke;
+                a {
+                    display: block;
+                    padding: 21px 25px;
+
+                    i {}
+                }
+                a:hover,a:active,a:focus{
+                    opacity: 0.2;
+                }
+            }
+        }
+
+        .search-engine:hover i {
+            color: $color-black;
+        }
+
+        .logo-box-wrapper {
+
+        }
+
+        .logo-box {
+            background-color: $dark-color;
+            position        : absolute;
+            top             : 0;
+            display         : block;
+            padding         : 0px;
+            min-width       : 105px;
+            text-align      : center;
+            text-decoration : none;
+            box-shadow      : 0 0 5px rgba(0,0,0,0.5);
+            padding-bottom  : 4px;
+
+            a {
+                text-decoration: none;
+
+                img {
+                    margin: auto;
+                }
+            }
+
+            span {
+                color: $color-white;
+            }
+
+            p {
+                padding-top: 2px;
+                margin     : 0;
+                color      : $color-white;
+                font-weight: bold;
+            }
+        }
+
+        .logo-box-new {
+            left: 42px;
+        }
+    }
+
+    .nav-shadow {
+        height: 60px;
+    }
+
+    .header-btns{
+        padding-top: 0px;
+        .profile-img-div{
+            background: $color-white none repeat scroll 0 0;
+            border-radius: 50%;
+            display: block;
+            float: left;
+            height: 23px;
+            margin-right: 8px;
+            vertical-align: middle;
+            width: 23px;
+            background-size: cover;
+            background-position: center;
+        }  
+        .header-dropdown{
+            background: $dark-color;
+            padding: 0px 15px;
+            a{
+                    padding: 11.3px 3px;
+                    color: $color-white;
+                    text-decoration: none;
+                    display: block;
+                    border-color: transparent!important;
+                    background: transparent!important;
+                img{
+                    margin-right: 7px;             
+                }          
+                span{
+
+                }     
+            }
+            ul.dropdown-menu{
+                right: 0px;
+                left: auto;
+                li{
+                    a{
+                        padding: 8px 16px;
+                        color: $color-dark-gray;                                                                                     
+                    }
+                }
+                li:hover a{
+                    color: $color-white;
+                    i{
+                        color: $color-white;
+                    }
+                }
+                li.divider{
+                    margin: 0px 0;
+                    background-color: $color-lightest-gray;
+                    width: 100%;
+                    border-color: $color-light-grayish-blue;
+                }                     
+            }
+        }                            
+    }
+
+    .header-signin {
+        padding-top: 13px;
+        text-align : right;
+    }
+    /*header css closed*/

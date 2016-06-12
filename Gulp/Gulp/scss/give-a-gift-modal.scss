@@ -1,0 +1,84 @@
+    /* Give a gift css start */
+  	#give-a-gift-modal {
+        .modal-dialog { 
+      		.modal-body {
+                padding-right: 0px !important;
+      			.tab-content {
+      				padding: 15px 0 !important; 
+      				.tab-pane {
+    	  				max-height: 250px;
+    	  				position: relative; 
+                        .col-xs-6.col-lg-3.col-md-4.col-sm-4 {
+                            padding-left: 0px !important;
+
+        				  	.give-gift {
+        				  		text-decoration: none !important;   
+        				  		.media {
+        				  			background-color: $color-very-light-gray;
+        				  			margin-bottom: 15px;
+                                    .pull-left {
+                                        padding-right: 3px;    
+            				  			.media-object {
+            				  				background: url('../images/rank-user.jpg') no-repeat;
+            				  				width: 50px;
+            				  				height: 50px;
+            							    background-size: 80% 80%;
+                                            background-position: center center;
+            				  			}
+                                    }
+        				  			.media-body {  
+                                        display: initial;
+                                        p { 
+                                            margin-top: 6px;
+                                            margin-bottom: 0px;
+                                            text-overflow: ellipsis;
+                                            overflow: hidden;
+                                            white-space: nowrap;
+                                            .media-heading {  
+                                                font-size: 13px;
+                                                font-family: $font-large;
+                                                font-weight: 300;
+                                                color: $color-darker-gray; 
+                                            }                           
+                                        }
+                                        .points {
+                                            text-overflow: ellipsis;
+                                            overflow: hidden;
+                                            white-space: nowrap;
+                                            .points-number {
+                                                font-size: 12px;
+                                                color: $color-darker-gray; 
+                                                opacity: 1;
+                                                margin: auto;
+                                            }
+                                            .points-text {
+                                                font-size: 12px;
+                                                color: $color-darker-gray; 
+                                                opacity: 1;
+                                                margin: auto;
+                                                opacity: 0.5;
+                                            }        
+                                        } 
+        				  			}
+        				  		} 
+        				  		.media:hover {
+        				  			background-color: $brand-color; 
+        				  			.media-body {
+        				  				span {
+        				  					color: $color-white;
+        				  				}
+                                        .points {
+                                            span {
+                                                color: $color-white;   
+                                            }
+                                        }
+        				  			}
+        				  		}
+        				  	}   					
+    	                }
+    	  			}
+      			} 
+      		}
+        }
+  	}
+  	/* Give a gift css closed */

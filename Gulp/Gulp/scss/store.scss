@@ -1,0 +1,223 @@
+    /*store xcss start*/
+    .store-container {
+        .vip-purchase-image {
+            img {
+                margin     : auto;
+                padding-top: 30%;
+            }
+        }
+
+        .purchase-model {
+            p {
+                padding: 0;
+                margin : 0;
+
+                strong {
+                    float         : left;
+                    color         : $color-darker-gray;
+                    text-transform: none;
+                    font-size     : 15px;
+                    font-family   : $font-small;
+                    font-weight   : 700;
+                    box-shadow    : none;
+                    padding       : 0;
+                }
+
+                strong.label {
+                    float         : none;
+                    color         : $color-darker-gray;
+                    text-transform: none;
+                    font-size     : 15px;
+                    font-family   : $font-small;
+                    font-weight   : 700;
+                    box-shadow    : none;
+                    padding       : 0;
+                }
+            }
+        }
+
+        .purchase {
+            margin-bottom: 10px;
+        }
+
+        .digit {
+            padding-top: 5px !important;
+
+            span {
+                font-size: 22px;
+            }
+        }
+
+        .visual {
+            width   : 50%;
+            position: relative;
+        }
+
+        .vip-image {
+            position: absolute;
+            top     : 22%;
+            left    : 6%;
+
+            p {
+                margin     : 0;
+                padding-top: 10%;
+                opacity    : .5;
+                color      : $color-white;
+                clear      : both;
+            }
+
+            a {
+                position: relative;
+                top     : -39px;
+                left    : 60%;
+
+                img {
+                    width: 70%;
+                }
+            }
+        }
+    }
+
+    .rank-container {
+        .list-thumb {
+            width          : 75px !important;
+            height         : 75px!important;
+            margin         : auto;
+            background     : $color-black;
+            margin-bottom  : 10px;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .list-item-content {
+            h3.uppercase {
+                a {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .list-datetime {
+            span {}
+
+            .icon-images {
+                width: 100%;
+
+                img {
+                    float        : left;
+                    padding-right: 5px;
+                }
+            }
+        }
+
+        h3.list-title {
+            font-size: 19px;
+        }
+    }
+
+    .user-gift-content {
+        .icon {
+            width          : 25px !important;
+            height         : 25px!important;
+            margin         : auto;
+            background     : $color-black;
+            margin-bottom  : 10px;
+            background-size: cover;
+        }
+
+        .list-datetime {
+            width: auto!important;
+        }
+
+        .list-item-content {
+            padding: 0 75px 0 40px !important;
+        }
+
+        .rank-list {
+            margin-top   : 10px;
+            margin-bottom: 10px;
+
+            h3.lower {
+                a {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    /*store css closed*/
+
+    /* Store css start */
+    .vip-type {
+        border: 1px solid $color-very-light-gray;
+        margin: 20px;
+        height: 100px;
+
+        .left {
+            padding         : 15px;
+            width           : 50%;
+            height          : 100%;
+            float           : left;
+            background-color: $color-light-grayish-cyan;
+
+            h4 {
+                font-weight: 700;
+                font-size  : 16px;
+            }
+        }
+
+        .right {
+            padding-top: 18px;
+            width      : 50%;
+            height     : 100%;
+            float      : right;
+
+            p {
+                opacity   : .6;
+                margin-top: 14px;
+            }
+        }
+
+        .vip-icon {
+            width: 70px;
+        }
+    }
+    /* Store css closed */
+
+    /* VIP Previleges css start */
+    .privilege-box {
+        padding: 10px;
+   
+        .privilege-img {
+            position: relative;
+            height: 99px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .privilege-text { 
+            padding-top: 10px;
+            overflow: hidden;
+            height: 90px;
+
+            .privilege-title {
+                font-family  : $font-small;
+                margin       : 0;
+                font-size    : 16px;
+                strong {
+                    font-weight: 600;
+                }
+
+            }
+            .privilege-description {
+                opacity: .5;
+                padding-left: 0px !important;
+                font-size: 14px;
+            }
+                
+        }
+    }
+   
+
+    /* VIP Previleges css start */

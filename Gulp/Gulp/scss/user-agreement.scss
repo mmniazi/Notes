@@ -1,0 +1,31 @@
+    .privacy-policy-content, .eula-content {
+        padding: 3px 6px;
+
+        h2 {
+            font-family: $font-large;
+            color      : $color-black;
+            font-weight: 700;
+            font-size  : 24px;
+        }
+
+        h3 {
+            font-family: $font-large;
+            color      : $color-black;
+            font-weight: 700;
+            font-size  : 18px;
+        }
+
+        p {
+            font-family: $font-small;
+        }
+
+        ul {
+            padding-left: 0;
+
+            li {
+                list-style-type: none;
+                padding-bottom : 15px;
+                text-align : justify;
+            }
+        }
+    }

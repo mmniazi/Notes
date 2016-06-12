@@ -1,0 +1,110 @@
+.category-box{
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image:url('../images/cat-banner.jpg');
+    transition: 0.15s ease;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      .bottom-text-area{
+            position: absolute;
+            bottom: 0px;
+            background-color: rgba(0, 0, 0, 0.62);
+            width: 100%;
+            padding: 10px 2px;
+        p{
+            font-family: $font-small;
+            margin: 0;
+            font-size: 16px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            font-weight: 600;
+            color:$color-white; 
+        }
+        span{
+            opacity: .5;
+            padding: 0;
+            font-size: 15px;
+            font-family: $font-small;
+            margin: 0;
+            font-size: 16px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            color:$color-white; 
+        }
+        p.views{
+            text-align: center;
+            float: right;
+            i{
+                clear: both;
+                color: $color-white;
+                padding-right: 3px;
+            }
+        }
+    }
+    &.user-status{
+          .top-live-button{
+                position: relative;
+                top: 0px;
+                background-color: transparent;
+                width: 100%;
+                padding: 15px 2px;
+                display: block;
+            .live{
+                    position: absolute;
+                    top: 0;
+                    right: 10px;
+                    background: #c90909;
+                    color: white;
+                    text-transform: none;
+                    padding: 5px 10px;
+                span{
+                    i{
+                        font-size: 10px;
+                        margin-right: 5px;
+                        margin-top: -2px;
+                        position: relative;
+                        top: -1px;
+                        opacity: 1;
+                    }
+                }
+            }
+            .offline{
+                    background: gray;
+                    color: $color-white;
+                    span{
+                        i{
+                            display: none;
+                        }
+                    }
+            }
+        }
+    };
+    .top-live-button{
+        display: none;
+    }
+}
+.category-box:hover{
+    .bottom-text-area{
+            background-color: rgba(0, 0, 0,0.8);
+    }
+}
+.category-small-box{
+    height: 163px;
+    margin-bottom: 25px;
+    transition: 0.15s ease;
+    position: relative;
+
+    &:hover {
+        /*transform: scaleX(1.04) scaleY(1.04);
+        z-index: 2;*/
+    };
+
+    &:active {
+        transform: scaleX(0.95) scaleY(0.95);
+        z-index: 2;
+    };
+}

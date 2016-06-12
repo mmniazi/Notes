@@ -1,3 +1,5 @@
+// A must read cheat sheet
+// https://www.coursera.org/learn/progfun1/supplement/Sauv3/cheat-sheet
 // Take left most operator and evaluate operands and apply
 // operator operands.
 // Parameters with a definition:
@@ -15,7 +17,7 @@ def square(x: Double) = x * x
 // using => e.g def fnt (x:=> Int) = 1
 // Conditional expressions:
 def abs(x: Int) = if (x >= 0) x else -x
-// We can have to type of definitions
+// We can have two type of definitions
 // 1 - Definition by name: "using def keyword" = lazy
 // 2 - Definition by value: "using val keyword"
 
@@ -352,7 +354,7 @@ class Succ(n: Nat) extends Nat {
 
 // C[T] is parametrized type and A and B are such that A <: B
 // if C[A] <: C[B] C is covariant
-// if C[B] >: C[B] C is contravariant
+// if C[A] >: C[B] C is contravariant
 // if neither C[A] or C[B] is subtype then C is non-variant
 
 // C[-T] : contravariant
@@ -377,7 +379,7 @@ class Succ(n: Nat) extends Nat {
 // then T in List[T] will be undefined so we have to replace T with
 // something that can accept all types; Nothing a good candidate
 // because it is subtype of all types also if you look at List[T]
-// definition return time of head is also T and for tail its List[T]
+// definition return type of head is also T and for tail its List[T]
 // and in our new Nil definition its Nothing for all three of them
 // and that corresponds to structure of List[T] because Nothing is
 // subtype of List[Nothing] but we have to make List[T] covariant
@@ -563,7 +565,7 @@ val data = List(1, 1, 1, 2, 2, 1, 3, 3, 1)
 def pack[T](xs: List[T]): List[List[T]] = xs match {
   case Nil => Nil
   case k :: ks =>
-    val (first, rest) = xs span (x => x == k)
+    val (first, rest) = xs span (_ == k)
     first :: pack(rest)
 }
 pack(data)
@@ -645,7 +647,7 @@ def scalarProduct2(xs: Vector[Double], ys: Vector[Double]): Double =
 def isPrime1(n: Int): Boolean = (2 until n) forall (n % _ != 0)
 // create pairs of numbers less then m whose sum is prime and
 // first element is greater then second
-// until: generates a range from 1 to n
+// until: generates a range from 1 to n - 1
 // flatten: converts list of lists to a single list with all
 // elements concatenated
 val m = 5
@@ -727,6 +729,7 @@ val books = Set(
   Book("f", Set("3", "5")),
   Book("g", Set("3", "10"))
 )
+
 // All books whose authors contains work "1"
 for {
   b <- books
@@ -778,8 +781,8 @@ val p4 = Map(1 -> 2, 2 -> 3) withDefaultValue 0
 
 // Representing polynomials as maps
 class Polynomial(terms: Map[Int, Double]) {
-  // Passing an arbitary number of parameters
-  // This allow us to skip writing intermediate datastructre Map every time
+  // Passing an arbitrary number of parameters
+  // This allow us to skip writing intermediate data structure Map every time
   // we initialize
   def this(bindings: (Int, Double)*) = this(bindings.toMap)
 
@@ -829,7 +832,7 @@ p5 + p6
 val stream1 = Stream.empty
 val stream2 = Stream.cons(1, Stream.cons(2, Stream.empty))
 val stream3 = Stream(1, 2, 3)
-// Or you can convery any collection to stream
+// Or you can convert any collection to stream
 (1 to 2000) toStream
 // Note the result of stream they have first element and
 // instead of second element they have the ? that means that it

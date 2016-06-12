@@ -1,0 +1,29 @@
+    .faq-tab {
+        ul.faq-text {
+            list-style: none;
+            padding   : 5px 25px;
+        }
+
+        .faq-text {
+            padding: 10px;
+
+            h2 {
+                font-family   : $font-large;
+                color         : $color-black;
+                text-transform: uppercase;
+                font-weight   : 700;
+                font-size     : 14px; 
+            }
+
+            p {
+                font-family: $font-small;
+            }
+            table {
+                .rich-lvls {
+                    img {
+                        width: 40px;
+                    }
+                }  
+            }
+        }
+    } 

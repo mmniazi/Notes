@@ -1,0 +1,77 @@
+$font-small: "Open Sans";
+$font-large: "montserrat";
+$dark-color: #18212b;
+$dark-color-accent: #3c4b59;
+$brand-color: #b30000;
+$brand-color-accent: #c90909;
+$brand-color-sharp: #e1281a;
+$color-black: black; 
+$color-white: white;
+$color-whitesmoke: whitesmoke;
+$color-nephritis: #27ae60;
+$color-pomegranate: #c0392b;
+$color-alizarin: #e74c3c;
+
+$color-very-dark-blackish-blue: #020507;
+$color-darker-blackish-blue: #0D1317;
+$color-dark-blackish-blue: #0e181e;
+$color-blackish-blue: #121e29;
+$color-darker-gray: #333333;
+$color-dark-gray: #6e6e6e;
+$color-darkish-gray: #9a9a9a;
+$color-darkest-grayish-blue: #37434a;
+$color-very-dark-grayish-blue: #617481;
+$color-darker-grayish-blue: #7d8c92;
+$color-dark-grayish-blue: #92979b;
+$color-light-gray: #cccccc;
+$color-very-light-gray: #eeeeee;
+$color-lightest-gray: #e5e5e5;
+$color-dark-grayish-blue: #bac3d0;
+$color-grayish-blue: #BFCAD1;
+$color-light-grayish-blue: #e8ecee;
+$color-lighter-grayish-blue: #f3f7fa;
+$color-light-grayish-red: #E8E7E7;
+$color-lighter-grayish-red: #F9F8F8;
+$color-light-grayish-cyan: #ecf0f1;
+$color-gray: gray;
+$color-red:red;
+
+$color-darker-blue: #2C3E50;
+$color-dark-blue: #5a7391;
+$color-blue: #5b9bd1;
+
+$color-cloud: #f0f4f7;
+$color-offwhite: #fafcfd;
+
+$color-very-dark-grayish-red: #5d3d3d;
+$color-very-dark-red: #6f0000;
+$color-dark-red: #980b0b;
+
+$color-facebook: #3b5998;
+$color-twitter: #55acee;
+$color-google-plus: #dc4e41;
+$color-instagram: #3f729b;
+
+/* CSS reset */
+* {
+    margin: 0;
+}
+
+body, html {
+    height: 100%;
+}
+
+.clear {
+    clear: both;
+}
+a{
+	color: $color-darker-gray;
+}
+a:hover {
+	text-decoration: none!important;
+	color: inherit;
+}
+.close{
+	text-indent: 0px;
+}
+

@@ -1,0 +1,84 @@
+  	/* Login modal css start */
+
+	.modal-title {
+		font-weight: 600 !important;
+/*		i {
+			margin-top: 5px;
+		}*/
+
+		.spinner {
+			width: 18px !important;
+			height: 18px !important;
+			margin-top: 5px !important;
+		}
+	}
+	.modal-form { 
+		padding: 10px 5px;
+		.valid-text{
+			float: left;
+		} 
+		.valid-code{
+			float: left;
+			padding-left: 10px;
+			img{
+
+			}
+		}
+	}
+	.form-actions {
+		button {
+			margin-bottom: 10px;
+		}
+		.new-account {
+			text-decoration: none;
+		}
+	}
+	.login-options {
+	    margin-top: 15px;
+	    padding-top: 20px;
+	    padding-bottom: 30px;
+	    border-top: 1px solid rgba(0, 0, 0, 0.3);
+	    h4 {
+	    	font-family: $font-small;
+	    	margin-top: 9px;
+	    	font-size: 17px;
+	    }
+	    .action-social-icons {
+	    	.facebook {
+	    		background-color: $color-facebook;
+	    		color: white;
+	    	}
+	    	.twitter {
+	    		background-color: $color-twitter;
+	    		color: white;
+	    	}
+	    	.google-plus {
+	    		background-color: $color-google-plus;
+	    		color: white;
+	    	}
+	    	.instagram {
+	    		background-color: $color-instagram;
+	    		color: white;
+	    	}
+
+	   	}
+	}
+	.red-thunderbird {
+		font-family: $font-small;
+	}  
+	.modal-title {
+		font-family: $font-small;
+	} 
+
+	.error-alert {
+		span {
+			font-family: $font-small;
+		}
+	}
+
+	.form-group {
+		label, button {
+			font-family: $font-small;
+		}
+	}
+	/* Login modal css closed */

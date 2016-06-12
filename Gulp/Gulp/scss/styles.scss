@@ -1,0 +1,245 @@
+@import 'global.scss';
+
+body {
+    background: radial-gradient(ellipse at center,$color-white 0%,$color-white 50%,$color-light-grayish-blue 100%);
+    font-family: $font-small;
+    background-attachment: fixed;
+
+    &.plain {
+    	background: $color-white;
+    }
+    &.error-403-bg {
+        background: $color-blackish-blue !important;
+    }
+    &.error-404-bg {
+        background: $brand-color !important;
+    }
+    &.mobile-app-bg {
+        background-image: url('../images/mobile-app-bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center 20%;
+    }
+    &.mobile-banner-bg {
+        background: rgba(225,47,28,1) !important;
+    }
+    .nopadding {
+		padding: 0 !important;
+		margin: 0 !important;
+	}
+
+	.templates-collection {
+		display: none;
+	}
+    .task-container{
+        .portlet{
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+            .portlet-title {
+                margin-bottom: 0px;
+            }
+            .form-body {
+                .form-group {
+                    padding: 10px 0px;
+                    margin-bottom: 0px;
+                    p {
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        margin-bottom: 0px;
+                    }
+                    i {
+                       padding-right: 30px;
+                       font-size: 20px;
+                    }
+                    .check-color {
+                        color: $color-nephritis;
+                    }
+                    .cross-color {
+                        color: $color-pomegranate;
+                    }
+                    .task-name {
+                        font-weight: 600;
+                    }
+                    .reward-details {
+                        opacity: 0.7;
+                        padding-left: 30px;
+                    }
+                    .reward-button{
+                        margin-right: 0px;
+                        background: $brand-color;
+                        position: relative;
+                        top: 3px;
+                    }
+                    .reward-button:hover{
+                        background: $brand-color-accent;
+                    }
+                }
+                .form-group:hover {
+                    background-color: #e8ecee;
+                }
+
+            }
+        }
+
+    }
+
+    @import 'header.scss';
+
+    @import 'thumb-box.scss';
+
+    @import 'category-box.scss';
+
+    .heading {
+        text-align: center;
+
+        h1 {
+            font-family   : $font-large;
+            color         : $color-black;
+            text-transform: uppercase;
+            font-weight   : 700;
+            text-shadow   : 3px 3px 0 rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    .thumbnails-container {
+        margin-left : -15px;
+        margin-right: -15px;
+    }
+
+	.wrapper {
+		min-height: 100%;
+		height: auto !important;
+		height: 100%;
+		margin: 0 auto -206px;
+	}
+
+    .wrapper-push, footer {
+        height: 210px;
+    }
+
+    @import 'footer.scss';
+
+    @import 'contact.scss';
+
+
+    /*lemnation key info statrt*/
+    .key-div {
+        p {
+            margin     : 0;
+            padding    : 0;
+            font-family: $font-small;
+        }
+    }
+    /*lemnation key info closed*/
+
+    /*panda buttons css stsrt*/
+    .panda-buttons {
+        button {}
+    }
+    /*panda button css closed*/
+    /*panda text css stsrt*/
+    .panda-text {
+        p {}
+    }
+    /*panda text css closed*/
+    /*panda heading css stsrt*/
+    .panda-heading {
+        h1 {}
+
+        h2 {}
+
+        h3 {}
+
+        h4 {}
+
+        h5 {}
+
+        h6 {}
+    }
+    /*panda heading css cloased*/
+    /*panda color library stsrt*/
+    .panda-color {}
+    /*panda color library closed*/
+
+    @import 'home.scss';
+
+    .big-icon {
+        display        : block;
+        text-decoration: none;
+        color          : $color-darker-gray;
+    }
+
+    .ui-widget-content {
+        z-index: 9999;
+
+        .ui-menu-item {
+            list-style-image: none;
+        }
+
+        .ui-state-focus,
+        .ui-state-hover {
+            background-color: $brand-color !important;
+            color           : $color-white!important;
+            list-style-image: none;
+            background      : none;
+        }
+    }
+
+    @import 'faq.scss';
+
+    @import 'user-agreement.scss';
+
+    @import 'streaming.scss';
+
+    @import 'agency-dashboard.scss';
+
+    @import 'store.scss';
+
+    @import 'profile.scss';
+
+    @import 'login-modal.scss';
+
+    @import 'give-a-gift-modal.scss';
+
+    @import 'come-later-modal.scss';
+
+    @import 'sub-category.scss';
+
+
+    .agency-main{
+        width: 100%!important;
+        margin-left: 0%!important;
+    }
+    .ranking-head-bg{
+        background: $dark-color !important;
+    }
+    .user-gift-heading{
+        background-color: $brand-color !important;
+    }
+    .user-gift-list{
+        border-color: $brand-color $brand-color $color-light-grayish-blue !important;
+    }
+    .user-gift-list:hover{
+        background-color: $color-lighter-grayish-blue !important;
+    }
+    .user-gift-list h3 a:hover{
+        color: $brand-color !important;
+    }
+    .tabbable-line{
+        ul.nav-tabs{
+                li{border-bottom: 4px solid transparent;}
+                li:hover{
+
+                }
+        }
+    }
+
+}
+    @import 'error.scss';
+
+    @import 'mobile-banner.scss';
+
+    @import 'timer.scss';
+
+    @import 'media.scss';

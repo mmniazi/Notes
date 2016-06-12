@@ -1,0 +1,67 @@
+/* Error pages CSS Start */
+
+.error-container {
+	height: 100%;
+	width: 90%;
+    display: table;
+
+	.error-wrapper {  
+	    display: table-cell;
+	    height: 100%;
+	    vertical-align: middle;
+		.img-404-wrapper {
+			padding-right: 20px;
+		    padding-left: 63%;
+		    margin: 0 auto;
+		}
+		.padding-403-img {
+			padding-left: 80% !important;
+		}
+		.dot-wrapper {
+			padding-left: 56%; 
+			margin: 0 auto;
+			.dot {
+			    width: 26px;
+			    height: 24px;
+			    background-color: $color-white;
+			}
+		}
+		.padding-403-dot {
+			padding-left: 65% !important;
+		}
+		.panda-img-wrapper {
+			/*padding-left: 115px;*/ 
+		}
+		.page-title {
+			color: $color-white;
+			
+			h1 {
+				font-family: $font-large;
+				text-transform: uppercase;
+				margin-bottom: 5px;
+			}
+			p {
+				font-family: $font-small;
+				font-size: 22px;
+				margin-top: 0px;
+				margin-bottom: 25px;
+			}
+			.panda-bg-arrow {
+				background-image: url(../images/bg-arrow.png);
+			    background-repeat: no-repeat;
+			    background-position: center center;
+			    height: 128px;
+			    width: auto;
+			}
+		}
+		.menu-buttons-wrapper {
+			.btn {
+				border-radius: 0px;
+				background-color: $color-black !important;
+				padding: 12px 33px 9px;
+				margin: 0px 3px;
+			}
+		}
+	}
+}
+/* Error pages CSS Closed */

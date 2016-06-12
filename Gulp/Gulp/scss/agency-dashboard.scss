@@ -1,0 +1,296 @@
+    /*ranking css stsrt*/
+    .agency-dashboard {
+        .gift-text {
+            p {
+                width: 80%!important;
+            }
+        }
+
+        .profile-user-image {
+            img {
+                float                : none;
+                margin               : 0 auto;
+                width                : 50%;
+                height               : 50%;
+                -webkit-border-radius: 50%!important;
+                -moz-border-radius   : 50%!important;
+                border-radius        : 50%!important;
+            }
+        }
+
+        .profile-usertitle {
+            text-align: center;
+            margin-top: 20px;
+
+            .profile-usertitle-name {
+                color        : $color-dark-blue;
+                font-size    : 20px;
+                font-weight  : 600;
+                margin-bottom: 7px;
+            }
+
+            .profile-usertitle-job {
+                text-transform: uppercase;
+                color         : $color-blue;
+                font-size     : 13px;
+                font-weight   : 800;
+                margin-bottom : 7px;
+            }
+        }
+
+        .profile-userbuttons {
+            text-align: center;
+            margin-top: 20px;
+
+            button {}
+        }
+
+        .profile-usermenu {
+            margin-top    : 20px;
+            padding-bottom: 20px;
+
+            .nav {
+                li {
+                    border-bottom: 1px solid $color-cloud;
+
+                    a {
+                        font-size  : 12px;
+                        font-weight: 400;
+                        padding    : 5px;
+                        color      : $color-gray;
+
+                        i {
+                            margin-right: 8px;
+                            font-size   : 16px;
+                        }
+                    }
+
+                    a:hover {
+                        background-color: $color-offwhite;
+                        color           : $color-blue;
+                    }
+                }
+            }
+        }
+
+        .purchase-model {
+            div {
+                padding: 0;
+                margin : 0;
+
+                strong {
+                    float         : left;
+                    color         : $color-darker-gray;
+                    text-transform: none;
+                    font-size     : 15px;
+                    font-family   : $font-small;
+                    font-weight   : 700;
+                    box-shadow    : none;
+                    padding       : 0;
+                }
+
+                strong.label {
+                    float         : none;
+                    color         : $color-darker-gray;
+                    text-transform: none;
+                    font-size     : 15px;
+                    font-family   : $font-small;
+                    font-weight   : 700;
+                    box-shadow    : none;
+                    padding       : 0;
+                }
+
+                img {
+                    padding-left: 10px;
+                }
+
+                span {
+                    float       : left;
+                    padding-left: 10px;
+                }
+            }
+        }
+
+        .honor-ranking {
+            .honor-ranking-row {
+                margin-top   : 15px;
+                margin-bottom: 15px;
+
+                .user-Profile {
+                    padding-right: 0;
+
+                    .user-image {
+                        background: url("../images/family_icons.gif") no-repeat 0 0;
+                        width     : 51px;
+                        height    : 48px;
+                        display   : block;
+                        text-align: center;
+                    }
+                }
+
+                .user-text {
+                    p {
+                        font-weight: 600;
+                        font-family: $font-small;
+                        color      : $color-darker-gray;
+                        margin     : 0;
+                    }
+
+                    span {
+                        font-family: $font-small;
+                        opacity    : .5;
+                        padding    : 0;
+                        font-size  : 15px;
+                    }
+                }
+            }
+        }
+
+        .agency-name {
+            .user-comment {
+                padding-top   : 10px;
+                padding-bottom: 10px;
+
+                p {
+                    margin     : 0;
+                    font-family: $font-small;
+                    opacity    : .5;
+                    padding    : 0;
+                    font-size  : 15px;
+                }
+
+                strong {
+                    font-weight: 600;
+                    font-family: $font-small;
+                    color      : $color-darker-gray;
+                }
+            }
+
+            .user-Profile {
+                padding-right: 0;
+
+                .user-image {
+                    img {}
+                }
+            }
+
+            .user-text {
+                p {
+                    font-weight: 600;
+                    font-family: $font-small;
+                    color      : $color-darker-gray;
+                    margin     : 0;
+                }
+
+                span {
+                    font-family: $font-small;
+                    opacity    : .5;
+                    padding    : 0;
+                    font-size  : 15px;
+                }
+            }
+        }
+    }
+    /*ranking css closed*/
+
+    /* Agency dashboard new CSS start */
+    .agency-container {
+        .media {
+            margin-bottom: 15px;
+            .pull-left {
+                padding-right: 8px;    
+                .media-object {
+                    width: 50px;
+                    height: 50px;
+                    background-repeat: no-repeat;
+                    background-size: 90% 90%;
+                    background-position: center center;
+                }
+            }
+            .media-body {  
+                display: initial;
+                p { 
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    margin: 5px 0px;
+                }
+                    .media-heading {  
+                        font-size: 14px;
+                        font-family: $font-small;
+                        font-weight: 600;
+                    }                  
+                    .media-subheading {
+                        font-size: 14px;
+                        opacity: 0.7;
+                        margin: auto;                        
+                    }         
+                
+            }
+        } 
+        .agency-info {
+            .agency-img {
+                height: 114px;
+                background-image: url("../images/text1.gif");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+            p {
+                margin-top: 0px;
+                margin-bottom: 5px;
+            }
+            .agency-name {
+                font-size: 18px;
+                font-weight: 600;
+            }
+            .agency-work {
+                font-size: 16px;
+            }
+            .agency-talents, .agency-members, .agency-time {
+                font-size: 12px;
+            }
+            .join-btn-wrapper {
+                padding: 42px 0px;
+            }
+        }
+        .agency-about-us {
+            .about-us-title {
+                font-size: 16px;
+                font-weight: 600;
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+            .about-us-detail {
+                font-size: 14px;
+                opacity: 0.6;
+                margin-bottom: 0px;
+                margin-top: 10px;
+            }
+
+        }
+        .agency-tabs-wrapper {
+            margin-bottom: 0px;
+            .nav.nav-tabs {
+                li {
+                    a {
+                        font-size: 14px;
+                    }
+                }
+            }
+            .portlet-title {
+                padding-left: 15px;
+                margin-bottom: 25px;
+            }
+            .portlet-body {
+                padding-top: 0px;
+            }
+            #talent-roster {
+
+            }
+            #agency-honor-rankings {
+            }
+        }
+    } 
+
+    /* Agency dashboard new CSS end */
