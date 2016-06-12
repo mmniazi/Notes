@@ -849,7 +849,7 @@ val stream4 = 1 #:: 2 #:: Stream.empty
 // it is not evaluated until def is called so you may think
 // lazy val and def are same thing well they are not because
 // def is reevaluated every time it is called but lazy stores
-// the value of first evaluationn and then gives that same value
+// the value of first evaluation and then gives that same value
 // whenever its asked
 def expr = {
   val x = {
