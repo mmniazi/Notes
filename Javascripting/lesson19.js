@@ -16,3 +16,22 @@ var a = 1, b = 2, c = 3;
         })();
     })();
 })();
+
+
+// a b c are not accessible outside, it is self contained
+(function () {
+    var a = 1;
+    var b = 2;
+    var c = 3;
+    console.log(a + b + c)
+})();
+
+
+// Polutes gloabal namespace
+var a = 1;
+var b = 2;
+var c = 3;
+console.log(a + b + c)
+
+
+// function accepts function 
