@@ -5,7 +5,7 @@
   You create branch for each feature or fix and then before pushing merge master into your branch and then test that your branch works, if it does you push the it to master.
 
 3 - Gitflow:
-  You have two permanent branches master and development. Master is ALWAYS deployable and all development is carried out on development branch. If there is some bug report after deployment you create a hotfix branch from master and fix it there and then you push to master and development branch, hotfix is temporary branch and gets deleted after usage. If you are going to create a feature you branch from develop and merge back to it after development. When develop is release ready we create a release branch and test it in release branch any fix are made and final version is pushed to both master and develop branch
+  You have two permanent branches master and development. Master is ALWAYS deployable and all development is carried out on development branch. If there is some bug report after deployment you create a hotfix branch from master and fix it there and then you push to master and development branch, hotfix is temporary branch and gets deleted after usage. If you are going to create a feature, you branch from development and merge back to it after development. When development branch is release ready, we create a release branch from it and test code in release branch, if required any fix are made and final version is pushed to both master and development branch
 
 4 - Fork:
   Instead of branch you create fork and work in your own repo with complete write access and then submit pull requests to the orignal repo.

@@ -1,0 +1,6 @@
+- Standard monitoring time is 5 min
+- Detailed monitoring time is 1 min
+- You can craete alarms to notify in case some threshold is reached or take some action like terminate instance
+- Events helps to respond to state change of ec2 instances
+- Cloudwatch logs helps you aggregate, monitor and store logs.
+- DONT confuse with cloudtrail, cloudtrail is used to monitor every thing you do on instance like api calls.

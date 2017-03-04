@@ -1,10 +1,10 @@
 /* Basic Types */
 // You can skip or mention types
-var isDone = false;
-var height: number = 6;
+let isDone = false;
+let height: number = 6;
 // Array types -- both are same
-var list: number[] = [1, 2, 3, 4];
-var newList: Array<number> = [1, 2, 3, 4];
+const list: number[] = [1, 2, 3, 4];
+const newList: Array<number> = [1, 2, 3, 4];
 
 // Using latest ecmascript 6 string feature
 console.log(`${list} || ${newList}`);
@@ -14,13 +14,13 @@ console.log(`${list} || ${newList}`);
 enum Fruit {
   Banana, Apple, PineApple,
 }
-var banana: Fruit = Fruit.Banana;
+let banana: Fruit = Fruit.Banana;
 // You can also use numerical value to get enum
-var apple = Fruit[1];
+const apple = Fruit[1];
 console.log(apple);
 
 // We can opt-out type checking by using "any" type
-var whatever: any = 3;
+let whatever: any = 3;
 console.log(whatever);
 whatever = "noob string";
 console.log(whatever);
@@ -41,7 +41,7 @@ interface noobChecker {
 function printNoobness(player: noobChecker) {
   console.log(player.noobness);
 }
-var aPlyr = { games: 10, noobness: "imba" };
+const aPlyr = {games: 10, noobness: "imba"};
 printNoobness(aPlyr);
 
 // Optional properties
@@ -50,7 +50,7 @@ interface SquareConfig {
   width?: number;
 }
 function createSquare(config: SquareConfig): { color: string; area: number } {
-  var newSquare = { color: "white", area: 100 };
+  const newSquare = {color: "white", area: 100};
   if (config.color) {
     newSquare.color = config.color;
   }
@@ -59,7 +59,7 @@ function createSquare(config: SquareConfig): { color: string; area: number } {
   }
   return newSquare;
 }
-var mySquare = createSquare({ color: "black" });
+const mySquare = createSquare({color: "black"});
 console.log(mySquare);
 
 // Function interface
@@ -67,22 +67,16 @@ interface SearchFunc {
   (source: string, subString: string): boolean;
 }
 // As a side note name of parameters are irrelevant only type matters
-var mySearch: SearchFunc = function(src: string, sub: string) {
-  var result = src.search(sub);
-  if (result == -1) {
-    return false;
-  }
-  else {
-    return true;
-  }
-}
+let mySearch: SearchFunc = function (src: string, sub: string): boolean {
+  return src.search(sub) != -1;
+};
 
 // Array types
 // There are two types of supported index string and number
 interface StringArray {
   [index: number]: string;
 }
-var myArray: StringArray = ["bob the builder", "Ben 10"];
+let myArray: StringArray = ["bob the builder", "Ben 10"];
 
 // Implementing an interface -- To Make Sure that Class meets certain criteria
 interface ClockInterface {
@@ -105,8 +99,8 @@ class newClock {
   currentTime: Date;
   constructor(h: number, m: number) { }
 }
-var cs: ClockStatic = newClock;
-var myClock = new cs(7, 30);
+const cs: ClockStatic = newClock;
+let myClock = new cs(7, 30);
 
 // Like classes, interfaces can extend each other and yes it can extend many
 interface Shape {
@@ -118,7 +112,7 @@ interface PenStroke {
 interface Square extends Shape, PenStroke {
   sideLength: number;
 }
-var square = <Square>{};
+const square = <Square>{};
 square.color = "blue";
 square.sideLength = 10;
 square.penWidth = 5.0;
@@ -132,12 +126,13 @@ interface Counter {
   reset(): void;
 }
 function createCounter(): Counter {
-  var counter = <Counter>function(start: number) { };
+  const counter = <Counter> function (start: number) {
+  };
   counter.interval = 123;
   counter.reset = function() { };
   return counter;
 }
-var c: Counter = createCounter();
+const c: Counter = createCounter();
 c(10);
 c.reset();
 console.log(c.interval);
@@ -155,10 +150,10 @@ class Greeter {
     return "Hello, " + this.greeting;
   }
 }
-var greeter = new Greeter("world");
+const greeter = new Greeter("world");
 console.log(greeter.greet);
 
-// Inheritence
+// Inheritance
 class Animal {
   name: string;
   constructor(name: string) { this.name = name; }
@@ -167,7 +162,6 @@ class Animal {
   }
 }
 class Snake extends Animal {
-  constructor(name: string) { super(name); }
   move(meters = 5) {
     console.log("Slitering...");
     super.move(meters);
@@ -180,8 +174,8 @@ class Horse extends Animal {
     super.move(meters);
   }
 }
-var sam = new Snake("Sammy the python");
-var tom: Animal = new Horse("tommy the piano");
+const sam = new Snake("Sammy the python");
+const tom: Animal = new Horse("tommy the piano");
 sam.move();
 tom.move(34);
 
@@ -209,9 +203,9 @@ class Employee {
   constructor(theName: string) { this.name = theName; }
 }
 
-var animal = new Animal3("Goat");
-var rhino = new Rhino();
-var employee = new Employee("Bob");
+let animal = new Animal3("Goat");
+const rhino = new Rhino();
+let employee = new Employee("Bob");
 
 animal = rhino;
 // animal = employee; error: Animal and Employee are not compatible
@@ -224,7 +218,7 @@ class Animal4 {
 (new Animal4("Rabbit")).print();
 
 // Getters and Setters
-var pass = "noob";
+const pass = "noob";
 class Employee1 {
   private _fullName: string;
   get fullName(): string { return this._fullName }
@@ -236,7 +230,7 @@ class Employee1 {
     }
   }
 }
-var employee1 = new Employee1();
+const employee1 = new Employee1();
 employee1.fullName = "Bob Smith";
 if (employee1.fullName) {
   console.log(employee1.fullName);
@@ -246,13 +240,86 @@ if (employee1.fullName) {
 class Grid {
     static origin = {x: 0, y: 0};
     calculateDistanceFromOrigin(point: {x: number; y: number;}) {
-        var xDist = (point.x - Grid.origin.x);
-        var yDist = (point.y - Grid.origin.y);
+        const xDist = (point.x - Grid.origin.x);
+        const yDist = (point.y - Grid.origin.y);
         return Math.sqrt(xDist * xDist + yDist * yDist) / this.scale;
     }
     constructor (public scale: number) { }
 }
-var grid1 = new Grid(1.0);  // 1x scale
-var grid2 = new Grid(5.0);  // 5x scale
+const grid1 = new Grid(1.0);  // 1x scale
+const grid2 = new Grid(5.0);  // 5x scale
 console.log(grid1.calculateDistanceFromOrigin({x: 10, y: 10}));
 console.log(grid2.calculateDistanceFromOrigin({x: 10, y: 10}));
+
+// Generics
+function identity<T>(arg: T): T {
+  return arg;
+}
+
+let output = identity<string>("myString");
+let output1 = identity("myString"); // inferred
+
+function loggingIdentity<T>(arg: T[]): T[] {
+  console.log(arg.length);  // Array has a .length, so no more error
+  return arg;
+}
+
+let myIdentity: <T>(arg: T) => T = identity;
+
+// Generic interface
+interface GenericIdentityFn {
+  <T>(arg: T): T;
+}
+
+let myIdentity1: GenericIdentityFn = identity;
+
+class GenericNumber<T> {
+  zeroValue: T;
+  add: (x: T, y: T) => T;
+}
+
+let myGenericNumber = new GenericNumber<number>();
+myGenericNumber.zeroValue = 0;
+myGenericNumber.add = function(x, y) { return x + y; };
+
+interface Lengthwise {
+  length: number;
+}
+
+function loggingIdentity2<T extends Lengthwise>(arg: T): T {
+  console.log(arg.length);  // Now we know it has a .length property, so no more error
+  return arg;
+}
+
+loggingIdentity2({length: 10, value: 3});
+
+function copyFields<T extends U, U>(target: T, source: U): T {
+  for (let id in source) {
+    target[id] = source[id];
+  }
+  return target;
+}
+
+let x = { a: 1, b: 2, c: 3, d: 4 };
+
+copyFields(x, { b: 10, d: 20 }); // okay
+// copyFields(x, { Q: 90 });  // error: property 'Q' isn't declared in 'x'.
+
+// Union types
+/**
+ * Takes a string and adds "padding" to the left.
+ * If 'padding' is a string, then 'padding' is appended to the left side.
+ * If 'padding' is a number, then that number of spaces is added to the left side.
+ */
+function padLeft(value: string, padding: string | number) {
+  // ...
+}
+
+// Intersection type
+interface customType { b: number }
+function interDemo(value: {a} & customType) {}
+let testVar = {a : 1, b: 2};
+interDemo(testVar);
+
+// Type alias
+type Aaaa = string

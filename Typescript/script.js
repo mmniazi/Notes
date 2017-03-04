@@ -41,13 +41,7 @@ function createSquare(config) {
 var mySquare = createSquare({ color: "black" });
 console.log(mySquare);
 var mySearch = function (src, sub) {
-    var result = src.search(sub);
-    if (result == -1) {
-        return false;
-    }
-    else {
-        return true;
-    }
+    return src.search(sub) != -1;
 };
 var myArray = ["bob the builder", "Ben 10"];
 var Clock = (function () {
@@ -57,12 +51,12 @@ var Clock = (function () {
         this.currentTime = d;
     };
     return Clock;
-})();
+}());
 var newClock = (function () {
     function newClock(h, m) {
     }
     return newClock;
-})();
+}());
 var cs = newClock;
 var myClock = new cs(7, 30);
 var square = {};
@@ -70,7 +64,8 @@ square.color = "blue";
 square.sideLength = 10;
 square.penWidth = 5.0;
 function createCounter() {
-    var counter = function (start) { };
+    var counter = function (start) {
+    };
     counter.interval = 123;
     counter.reset = function () { };
     return counter;
@@ -89,7 +84,7 @@ var Greeter = (function () {
         return "Hello, " + this.greeting;
     };
     return Greeter;
-})();
+}());
 var greeter = new Greeter("world");
 console.log(greeter.greet);
 var Animal = (function () {
@@ -101,11 +96,11 @@ var Animal = (function () {
         console.log(this.name + " moved " + meters + "m.");
     };
     return Animal;
-})();
+}());
 var Snake = (function (_super) {
     __extends(Snake, _super);
-    function Snake(name) {
-        _super.call(this, name);
+    function Snake() {
+        _super.apply(this, arguments);
     }
     Snake.prototype.move = function (meters) {
         if (meters === void 0) { meters = 5; }
@@ -113,7 +108,7 @@ var Snake = (function (_super) {
         _super.prototype.move.call(this, meters);
     };
     return Snake;
-})(Animal);
+}(Animal));
 var Horse = (function (_super) {
     __extends(Horse, _super);
     function Horse(name) {
@@ -125,7 +120,7 @@ var Horse = (function (_super) {
         _super.prototype.move.call(this, meters);
     };
     return Horse;
-})(Animal);
+}(Animal));
 var sam = new Snake("Sammy the python");
 var tom = new Horse("tommy the piano");
 sam.move();
@@ -138,26 +133,26 @@ var Animal2 = (function () {
         console.log(this.name + " moved " + meters + "m.");
     };
     return Animal2;
-})();
+}());
 var Animal3 = (function () {
     function Animal3(theName) {
         this.name = theName;
     }
     return Animal3;
-})();
+}());
 var Rhino = (function (_super) {
     __extends(Rhino, _super);
     function Rhino() {
         _super.call(this, "Rhino");
     }
     return Rhino;
-})(Animal3);
+}(Animal3));
 var Employee = (function () {
     function Employee(theName) {
         this.name = theName;
     }
     return Employee;
-})();
+}());
 var animal = new Animal3("Goat");
 var rhino = new Rhino();
 var employee = new Employee("Bob");
@@ -168,7 +163,7 @@ var Animal4 = (function () {
     }
     Animal4.prototype.print = function () { console.log(this.name); };
     return Animal4;
-})();
+}());
 (new Animal4("Rabbit")).print();
 var pass = "noob";
 var Employee1 = (function () {
@@ -188,7 +183,7 @@ var Employee1 = (function () {
         configurable: true
     });
     return Employee1;
-})();
+}());
 var employee1 = new Employee1();
 employee1.fullName = "Bob Smith";
 if (employee1.fullName) {
@@ -205,8 +200,45 @@ var Grid = (function () {
     };
     Grid.origin = { x: 0, y: 0 };
     return Grid;
-})();
+}());
 var grid1 = new Grid(1.0);
 var grid2 = new Grid(5.0);
 console.log(grid1.calculateDistanceFromOrigin({ x: 10, y: 10 }));
 console.log(grid2.calculateDistanceFromOrigin({ x: 10, y: 10 }));
+function identity(arg) {
+    return arg;
+}
+var output = identity("myString");
+var output1 = identity("myString");
+function loggingIdentity(arg) {
+    console.log(arg.length);
+    return arg;
+}
+var myIdentity = identity;
+var myIdentity1 = identity;
+var GenericNumber = (function () {
+    function GenericNumber() {
+    }
+    return GenericNumber;
+}());
+var myGenericNumber = new GenericNumber();
+myGenericNumber.zeroValue = 0;
+myGenericNumber.add = function (x, y) { return x + y; };
+function loggingIdentity2(arg) {
+    console.log(arg.length);
+    return arg;
+}
+loggingIdentity2({ length: 10, value: 3 });
+function copyFields(target, source) {
+    for (var id in source) {
+        target[id] = source[id];
+    }
+    return target;
+}
+var x = { a: 1, b: 2, c: 3, d: 4 };
+copyFields(x, { b: 10, d: 20 });
+function padLeft(value, padding) {
+}
+function interDemo(value) { }
+var testVar = { a: 1, b: 2 };
+interDemo(testVar);
