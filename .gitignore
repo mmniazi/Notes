@@ -7,3 +7,5 @@ ncp-debug.log
 npm-debug.log
 **/.meteor
 **/.idea
+**/target
+**/.vscode
