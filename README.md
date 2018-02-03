@@ -1,2 +1,2 @@
 # Notes
-Notes for all crazy stuff I learn
+Notes of all crazy stuff I learn
