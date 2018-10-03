@@ -1,0 +1,17 @@
+- tension between frequently releasing and stability
+- solution is to define reliability we want to support and then release as frequent as possible while we are below realibility measure
+- realibility measure is called error budget
+- metrics we care about changes from service to service
+- for client facing services relevant metrics are found by discussing bussiness goals with product manager to find out what is most important for bussiness
+- for infrastucture services, because their use is too generic give end user multiple options with different relaibility options so they can select most cost effective option
+- while selecting desired availability we have to calculate how much value we will generate by adding one more level of 9, vs how much effort it takes
+- also availbility is effected by type of data we are handling forexample its better to shutdown a service with pii data if its malfunctioning then to keep up while maintanence is going on
+- instead of time based availabilty we prefer aggregate (rq/s) or percentage availabilty
+- canarying: testing new release on a subset of original traffic
+- error budget: remaining unreliability we can spend
+- we dont want anything above required minimum reliability (put that effort on innovation instead of reliability)
+- sli: service level indicator: latency, failre rate other measurable metrics
+- slo: value of sli we want to support
+- sla: is an agreement for predefined penalities if slo is not met (normally done with 3rd parties). e.g google search does not have sla but google work apps does
+- dont over achieve, otherwise users will have start expecting more than slo
+
